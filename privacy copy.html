@@ -1,0 +1,254 @@
+<title>Privacy Policy — Calorie Tracker</title>
+<style>
+  :root {
+    --ground: #FCFCFA;
+    --surface: #FFFFFF;
+    --ink: #1C1C1A;
+    --muted: #6E6E68;
+    --accent: #3F8E3B;
+    --accent-soft: #EDF5EB;
+    --rule: #E8E8E1;
+    --flag: #B4791C;
+    --flag-soft: #FBF3E2;
+    --serif: ui-serif, "New York", Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #14150F;
+      --surface: #1C1E17;
+      --ink: #F1F1E9;
+      --muted: #9C9C92;
+      --accent: #7CC46E;
+      --accent-soft: #1E2A1B;
+      --rule: #2C2E26;
+      --flag: #E0A945;
+      --flag-soft: #2A2317;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #14150F;
+    --surface: #1C1E17;
+    --ink: #F1F1E9;
+    --muted: #9C9C92;
+    --accent: #7CC46E;
+    --accent-soft: #1E2A1B;
+    --rule: #2C2E26;
+    --flag: #E0A945;
+    --flag-soft: #2A2317;
+  }
+  :root[data-theme="light"] {
+    --ground: #FCFCFA;
+    --surface: #FFFFFF;
+    --ink: #1C1C1A;
+    --muted: #6E6E68;
+    --accent: #3F8E3B;
+    --accent-soft: #EDF5EB;
+    --rule: #E8E8E1;
+    --flag: #B4791C;
+    --flag-soft: #FBF3E2;
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+  }
+
+  .masthead { display: flex; flex-direction: column; gap: 0.75rem; }
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  h1 {
+    font-size: clamp(2rem, 5vw, 2.85rem);
+    line-height: 1.1;
+    font-weight: 600;
+    margin: 0;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+  .dateline {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.25rem;
+  }
+  .lede { font-size: 1.12rem; color: var(--muted); margin: 0; text-wrap: pretty; }
+
+  .fill {
+    background: var(--flag-soft);
+    border-left: 3px solid var(--flag);
+    padding: 1rem 1.25rem;
+    font-family: var(--sans);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .fill strong { color: var(--flag); }
+  .fill ul { margin: 0; padding-left: 1.1rem; }
+
+  section { display: flex; flex-direction: column; gap: 0.9rem; }
+  h2 {
+    font-family: var(--sans);
+    font-size: 1.06rem;
+    font-weight: 650;
+    letter-spacing: -0.005em;
+    margin: 0;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+    text-wrap: balance;
+  }
+  h2 .n {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--accent);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  p { margin: 0; text-wrap: pretty; }
+  ul.body { margin: 0; padding-left: 1.35rem; display: flex; flex-direction: column; gap: 0.55rem; }
+  li::marker { color: var(--accent); }
+  .term { font-family: var(--sans); font-weight: 600; font-size: 0.95rem; }
+
+  .party {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 1rem 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .party h3 {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 650;
+    margin: 0;
+  }
+  .party p { font-size: 0.97rem; color: var(--muted); }
+  .parties { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .note {
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 1rem 1.15rem;
+    font-size: 0.98rem;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 1.5rem;
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+</style>
+
+<div class="page">
+  <header class="masthead">
+    <div class="eyebrow">Calorie Tracker</div>
+    <h1>Privacy Policy</h1>
+    <div class="dateline">
+      <span>Effective <strong>15 August 2026</strong></span>
+      <span>Applies to the Calorie Tracker iOS app</span>
+    </div>
+  </header>
+
+  <p class="lede">This app records what you eat. That means it holds information about your body and your habits, so it is worth being precise about what is collected, where it goes, and how to get rid of it.</p>
+
+
+  <section>
+    <h2><span class="n">01</span> Who is responsible</h2>
+    <p>Calorie Tracker is provided by <strong>Adizov Kamron</strong>. Questions about this policy, or about your data, go to <a href="mailto:adizovkamrom@gmail.com">adizovkamrom@gmail.com</a>.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span> What is collected</h2>
+    <p>Only what the app needs to work. Nothing is gathered in the background.</p>
+    <ul class="body">
+      <li><span class="term">Account.</span> Your email address if you register with one. If you use Sign in with Apple, Apple sends an identifier and, on first sign-in only, your name and an email address — which may be a private relay address that hides your real one.</li>
+      <li><span class="term">Your profile.</span> Name, age, gender, height, weight, goal, activity level, daily calorie target and any custom protein, carbohydrate and fat targets you set. You enter these during setup and can change them at any time.</li>
+      <li><span class="term">Your meals.</span> For each entry: the dish name, calories, protein, carbohydrates, fat, the time you ate, the meal type, and the photo if you took one.</li>
+      <li><span class="term">A daily counter.</span> How many AI estimates you have requested today, so free and subscribed accounts can be told apart.</li>
+    </ul>
+    <div class="note">There is no analytics or advertising software in this app. No third-party tracking libraries are installed, nothing follows you across other apps or websites, and your data is never sold.</div>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span> How photos and descriptions are used</h2>
+    <p>When you photograph a meal or describe it in writing, that photo or text is sent to OpenAI, which returns an estimate of the dish and its nutrition. The estimate is then yours to correct before you save it.</p>
+    <p>Photos you save are stored so they can appear next to the meal in your history. They are kept at web addresses that cannot be guessed, but anyone holding the exact address can open the image. Treat a meal photo the way you would treat any photo you have shared a link to.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span> Who else handles your data</h2>
+    <p>Three companies process data on the app's behalf. There are no others.</p>
+    <div class="parties">
+      <div class="party">
+        <h3>Supabase</h3>
+        <p>Runs the database, sign-in and file storage. Your account, profile, meals and photos live here.</p>
+      </div>
+      <div class="party">
+        <h3>OpenAI</h3>
+        <p>Receives a meal photo or written description and returns the nutrition estimate. It receives the food, not your profile or your history.</p>
+      </div>
+      <div class="party">
+        <h3>Apple</h3>
+        <p>Handles Sign in with Apple and every subscription payment. Card details go to Apple and are never seen by this app.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">05</span> How long it is kept</h2>
+    <p>Your data stays until you remove it. Delete an individual meal and it is gone along with its photo. Delete your account and everything goes: the account itself, every meal, every photo.</p>
+    <p>Account deletion lives inside the app, under Profile, and asks for your password before it proceeds. It cannot be undone, and there is no copy to restore from.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">06</span> Your rights</h2>
+    <ul class="body">
+      <li><span class="term">See it.</span> Everything the app holds about you is visible in the app itself.</li>
+      <li><span class="term">Correct it.</span> Profile details and any saved meal can be edited or removed at any time.</li>
+      <li><span class="term">Erase it.</span> Profile, then Delete Account.</li>
+      <li><span class="term">Ask.</span> For anything the app doesn't cover, write to <a href="mailto:adizovkamrom@gmail.com">adizovkamrom@gmail.com</a>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">07</span> Children</h2>
+    <p>Calorie Tracker is not intended for children under 13, and accounts should not be created for them. If you believe a child has registered, write to <a href="mailto:adizovkamrom@gmail.com">adizovkamrom@gmail.com</a> and the account will be removed.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">08</span> Changes to this policy</h2>
+    <p>If what the app collects changes, this page changes with it and the effective date above is updated. Continuing to use the app after a change means you accept the revised policy.</p>
+  </section>
+
+  <footer>Calorie Tracker · Adizov Kamron · adizovkamrom@gmail.com</footer>
+</div>
