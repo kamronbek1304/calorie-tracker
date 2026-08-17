@@ -1,297 +1,173 @@
-<title>Terms of Use — Calorie Tracker</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Use — Calorie Tracker: Food Scan</title>
 <style>
   :root {
-    --ground: #FCFCFA;
+    --bg: #FBFBF7;
     --surface: #FFFFFF;
-    --ink: #1C1C1A;
-    --muted: #6E6E68;
+    --text: #14161A;
+    --muted: #6B7280;
     --accent: #3F8E3B;
-    --accent-soft: #EDF5EB;
-    --rule: #E8E8E1;
-    --flag: #B4791C;
-    --flag-soft: #FBF3E2;
-    --serif: ui-serif, "New York", Georgia, "Times New Roman", serif;
-    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-    --mono: ui-monospace, "SF Mono", Menlo, monospace;
+    --line: #E6E7E1;
+    --warn-bg: #FFF6E8;
+    --warn-line: #F0D9AE;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --ground: #14150F;
-      --surface: #1C1E17;
-      --ink: #F1F1E9;
-      --muted: #9C9C92;
-      --accent: #7CC46E;
-      --accent-soft: #1E2A1B;
-      --rule: #2C2E26;
-      --flag: #E0A945;
-      --flag-soft: #2A2317;
+      --bg: #0F1113;
+      --surface: #16191C;
+      --text: #F2F3F0;
+      --muted: #9AA1A9;
+      --accent: #6BBF66;
+      --line: #262A2E;
+      --warn-bg: #241D10;
+      --warn-line: #4A3C1E;
     }
   }
-  :root[data-theme="dark"] {
-    --ground: #14150F;
-    --surface: #1C1E17;
-    --ink: #F1F1E9;
-    --muted: #9C9C92;
-    --accent: #7CC46E;
-    --accent-soft: #1E2A1B;
-    --rule: #2C2E26;
-    --flag: #E0A945;
-    --flag-soft: #2A2317;
-  }
-  :root[data-theme="light"] {
-    --ground: #FCFCFA;
-    --surface: #FFFFFF;
-    --ink: #1C1C1A;
-    --muted: #6E6E68;
-    --accent: #3F8E3B;
-    --accent-soft: #EDF5EB;
-    --rule: #E8E8E1;
-    --flag: #B4791C;
-    --flag-soft: #FBF3E2;
-  }
-
+  * { box-sizing: border-box; }
   body {
-    background: var(--ground);
-    color: var(--ink);
-    font-family: var(--serif);
-    font-size: 17px;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
-  .page {
-    max-width: 46rem;
-    margin: 0 auto;
-    padding: 4rem 1.5rem 6rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2.75rem;
-  }
-
-  .masthead { display: flex; flex-direction: column; gap: 0.75rem; }
-  .eyebrow {
-    font-family: var(--sans);
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--accent);
-  }
-  h1 {
-    font-size: clamp(2rem, 5vw, 2.85rem);
-    line-height: 1.1;
-    font-weight: 600;
     margin: 0;
-    text-wrap: balance;
-    letter-spacing: -0.01em;
+    padding: 40px 20px 80px;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
   }
-  .dateline {
-    font-family: var(--sans);
-    font-size: 0.85rem;
-    color: var(--muted);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem 1.25rem;
-  }
-  .lede { font-size: 1.12rem; color: var(--muted); margin: 0; text-wrap: pretty; }
-
-  .fill {
-    background: var(--flag-soft);
-    border-left: 3px solid var(--flag);
-    padding: 1rem 1.25rem;
-    font-family: var(--sans);
-    font-size: 0.92rem;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .fill strong { color: var(--flag); }
-  .fill ul { margin: 0; padding-left: 1.1rem; }
-
-  section { display: flex; flex-direction: column; gap: 0.9rem; }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.5px; }
   h2 {
-    font-family: var(--sans);
-    font-size: 1.06rem;
-    font-weight: 650;
-    letter-spacing: -0.005em;
-    margin: 0;
-    padding-top: 1.75rem;
-    border-top: 1px solid var(--rule);
-    display: flex;
-    gap: 0.75rem;
-    align-items: baseline;
-    text-wrap: balance;
+    font-size: 19px; margin: 38px 0 10px; letter-spacing: -0.2px;
+    padding-top: 22px; border-top: 1px solid var(--line);
   }
-  h2 .n {
-    font-family: var(--mono);
-    font-size: 0.78rem;
-    color: var(--accent);
-    font-weight: 500;
-    font-variant-numeric: tabular-nums;
+  h2:first-of-type { border-top: 0; padding-top: 0; }
+  .updated { color: var(--muted); font-size: 14px; margin: 0 0 28px; }
+  .lede {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 16px; padding: 18px 20px; margin: 0 0 34px;
   }
-  p { margin: 0; text-wrap: pretty; }
-  ul.body { margin: 0; padding-left: 1.35rem; display: flex; flex-direction: column; gap: 0.55rem; }
-  li::marker { color: var(--accent); }
-  .term { font-family: var(--sans); font-weight: 600; font-size: 0.95rem; }
-
-  .plans {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: var(--sans);
-    font-size: 0.95rem;
+  .lede p { margin: 0; }
+  .notice {
+    background: var(--warn-bg); border: 1px solid var(--warn-line);
+    border-radius: 16px; padding: 18px 20px; margin: 20px 0;
   }
-  .plans th, .plans td {
-    text-align: left;
-    padding: 0.6rem 0.75rem;
-    border-bottom: 1px solid var(--rule);
-  }
-  .plans th {
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    font-weight: 600;
-  }
-  .plans td:last-child { font-variant-numeric: tabular-nums; text-align: right; }
-  .table-wrap { overflow-x: auto; }
-
-  .warn {
-    background: var(--surface);
-    border: 1px solid var(--rule);
-    border-radius: 12px;
-    padding: 1.15rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-  .warn h3 {
-    font-family: var(--sans);
-    font-size: 0.95rem;
-    font-weight: 650;
-    margin: 0;
-  }
-  a { color: var(--accent); text-underline-offset: 3px; }
-  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+  .notice p { margin: 0; }
+  p, li { color: var(--text); }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  strong { font-weight: 600; }
   footer {
-    border-top: 1px solid var(--rule);
-    padding-top: 1.5rem;
-    font-family: var(--sans);
-    font-size: 0.85rem;
-    color: var(--muted);
+    margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 14px;
   }
 </style>
+</head>
+<body>
+<main>
 
-<div class="page">
-  <header class="masthead">
-    <div class="eyebrow">Calorie Tracker</div>
-    <h1>Terms of Use</h1>
-    <div class="dateline">
-      <span>Effective <strong>15 August 2026</strong></span>
-      <span>Applies to the Calorie Tracker iOS app</span>
-    </div>
-  </header>
+<h1>Terms of Use</h1>
+<p class="updated">Calorie Tracker: Food Scan &middot; Last updated 17 August 2026</p>
 
-  <p class="lede">The rules for using the app, and what the subscription actually commits you to. Read section 5 in particular — that is the one about money.</p>
-
-
-  <section>
-    <h2><span class="n">01</span> Agreement</h2>
-    <p>Calorie Tracker is provided by <strong>Adizov Kamron</strong>. Installing or using the app means you accept these terms. If you don't accept them, don't use the app.</p>
-  </section>
-
-  <section>
-    <h2><span class="n">02</span> What the app does</h2>
-    <p>You photograph a meal or describe it in writing, and the app estimates its calories and macronutrients. It keeps a history of what you logged and shows how it adds up against a daily target.</p>
-    <div class="warn">
-      <h3>Estimates are estimates</h3>
-      <p>Nutrition figures are produced by an AI model looking at a photo or a sentence. It cannot weigh your food, see what is under the surface, or know how it was cooked. Numbers will sometimes be wrong, occasionally by a lot. Correct them before saving when you know better.</p>
-      <p>The app is not a medical device and gives no medical advice. It is not for diagnosing, treating or managing any condition. Before changing your diet — especially if you are pregnant, have an eating disorder, diabetes, or any other condition affected by food — talk to a qualified professional.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2><span class="n">03</span> Your account</h2>
-    <ul class="body">
-      <li>Give accurate details. The calorie target is calculated from your height, weight, age and goal, so wrong inputs produce a meaningless target.</li>
-      <li>Your sign-in credentials are yours to protect. Anything done through your account is treated as done by you.</li>
-      <li>One account per person. Don't share it.</li>
-      <li>You must be at least 13 years old to register.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2><span class="n">04</span> Free use</h2>
-    <p>The app is free to use, including the full meal history, progress charts and reminders. Free accounts get three AI estimates per day. The allowance resets each day.</p>
-  </section>
-
-  <section>
-    <h2><span class="n">05</span> Subscriptions and billing</h2>
-    <p>Premium removes the daily limit on AI estimates. Three lengths are offered:</p>
-    <div class="table-wrap">
-      <table class="plans">
-        <thead>
-          <tr><th>Plan</th><th>Billed</th><th>Price</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>1 month</td><td>Every month</td><td>$2.99</td></tr>
-          <tr><td>3 months</td><td>Every 3 months</td><td>$6.99</td></tr>
-          <tr><td>6 months</td><td>Every 6 months</td><td>$11.99</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <ul class="body">
-      <li><span class="term">Free trial.</span> New subscribers get 3 days free. The trial is granted once per Apple ID across all three plans — switching plans does not earn another one.</li>
-      <li><span class="term">The trial converts.</span> When the 3 days end, the plan you chose starts and is charged, unless you cancel at least 24 hours before the trial ends.</li>
-      <li><span class="term">Automatic renewal.</span> Subscriptions renew at the end of each period unless cancelled at least 24 hours before that period ends. Renewal is charged to your Apple ID within 24 hours of the period ending.</li>
-      <li><span class="term">Cancelling.</span> Manage or cancel in the Settings app under your Apple ID, then Subscriptions. Cancelling stops the next charge; you keep Premium until the paid period runs out. It cannot be cancelled from inside this app.</li>
-      <li><span class="term">Payment.</span> All payment is handled by Apple. Card details never reach this app. Prices may differ by country and can change with notice.</li>
-      <li><span class="term">Refunds.</span> Refunds are Apple's to give, not ours. Request them through Apple support.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2><span class="n">06</span> Acceptable use</h2>
-    <ul class="body">
-      <li>Don't try to break, overload or reverse-engineer the app or the service behind it.</li>
-      <li>Don't use the AI feature for anything other than estimating food. Don't send images of other people, documents or anything illegal.</li>
-      <li>Don't automate access, resell the service, or use it to build a competing product.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2><span class="n">07</span> Your content</h2>
-    <p>Your meals and photos stay yours. To run the service, you give permission to store them and to send them for analysis as described in the <a href="https://claude.ai/code/artifact/528d5031-5e1f-4312-890f-e2d89d5e008a">Privacy Policy</a>. That permission ends when you delete the content or your account.</p>
-  </section>
-
-  <section>
-    <h2><span class="n">08</span> Availability</h2>
-    <p>The app depends on services that can go down, and on an AI model whose behaviour changes over time. Features may be added, changed or removed. Uninterrupted or error-free operation is not promised.</p>
-  </section>
-
-  <section>
-    <h2><span class="n">09</span> Liability</h2>
-    <p>The app is provided as is. To the extent the law allows, <strong>Adizov Kamron</strong> is not liable for indirect or consequential loss, for decisions made on the basis of an estimate, or for health outcomes. Nothing here limits liability that cannot legally be limited.</p>
-  </section>
-
-  <section>
-    <h2><span class="n">10</span> Ending it</h2>
-    <p>You can stop at any time by deleting your account in the app, under Profile. Access may be suspended if these terms are broken. An active subscription is still governed by Apple's billing rules described above.</p>
-  </section>
-
-  <section>
-    <h2><span class="n">11</span> Governing law</h2>
-    <p>These terms are governed by the law of <strong>Uzbekistan</strong>, without regard to conflict of law rules.</p>
-  </section>
-
-  <section>
-    <h2><span class="n">12</span> Changes</h2>
-    <p>These terms may be updated. The effective date above changes when they do, and continuing to use the app means you accept the revision.</p>
-  </section>
-
-  <section>
-    <h2><span class="n">13</span> Contact</h2>
-    <p>Questions go to <a href="mailto:adizovkamrom@gmail.com">adizovkamrom@gmail.com</a>.</p>
-  </section>
-
-  <footer>Calorie Tracker · Adizov Kamron · adizovkamrom@gmail.com</footer>
+<div class="lede">
+  <p>By creating an account and using Calorie Tracker: Food Scan, you agree to what
+  follows. If you do not agree, please do not use the app.</p>
 </div>
+
+<h2>What the app does</h2>
+<p>You photograph a meal or describe it in words, and the app estimates its calories and
+macronutrients, records it against your day, and shows your progress over time.</p>
+
+<div class="notice">
+  <p><strong>This is not medical advice.</strong> The nutrition figures are estimates
+  produced automatically from a photo or a description, and they can be wrong — sometimes
+  substantially. Do not rely on them to manage diabetes, an allergy, an eating disorder,
+  or any other medical condition. Talk to a doctor or a registered dietitian before making
+  meaningful changes to how you eat.</p>
+</div>
+
+<h2>Your account</h2>
+<p>Give accurate details when you sign up, keep your password to yourself, and let us know
+if you think someone else has got into your account. An account is for one person. You must
+be at least 13 years old to create one.</p>
+
+<h2>Subscriptions</h2>
+<p>Logging meals requires an active Premium subscription. Premium is sold in three lengths:
+<strong>one month</strong>, <strong>three months</strong> and <strong>six months</strong>.</p>
+
+<p><strong>Price.</strong> The price of each plan is shown inside the app on the
+subscription screen, in your own currency, before you buy anything. Prices differ by country
+and may change over time; the figure shown at the moment of purchase is the one that
+applies.</p>
+
+<p><strong>Free trial.</strong> When a free trial is offered, it is shown on the
+subscription screen along with its length. A trial turns into a paid subscription
+automatically when it ends, unless you cancel at least 24 hours beforehand. If you buy a
+subscription while a trial is running, the rest of the trial is forfeited.</p>
+
+<p><strong>Payment and renewal.</strong> Payment is charged to your Apple ID account when
+you confirm the purchase. Subscriptions renew automatically unless auto-renew is turned off
+at least 24 hours before the end of the current period. The renewal is charged within the
+24 hours before the period ends, at the price for the plan you chose.</p>
+
+<p><strong>Managing and cancelling.</strong> You can turn off auto-renewal at any time in
+your Apple ID account settings, under Subscriptions. Cancelling stops the next renewal; the
+subscription stays active until the end of the period you have already paid for.</p>
+
+<p><strong>Refunds.</strong> All payments are handled by Apple, and refunds are Apple's to
+give. Request one through Apple at
+<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+
+<h2>How the subscription is recognised</h2>
+<p>A subscription belongs to the Apple ID that bought it, which is how the App Store works.
+If you reinstall the app or move to a new device, use <strong>Restore</strong> on the
+subscription screen while signed in to the same Apple ID.</p>
+
+<h2>Your photos and content</h2>
+<p>Meal photos remain yours. By uploading one you allow the app to store it and to send it
+for automated nutrition analysis, purely so the feature can work. Nothing you upload is
+published, shown to other people, or used for advertising. Do not upload anything you have
+no right to use.</p>
+
+<h2>Fair use</h2>
+<p>Please do not take the app apart or attempt to reverse engineer it, reach the service by
+anything other than the app itself, run automated or scripted requests against it, resell
+access, or use it in a way that breaks the law where you live. Automated meal analysis is
+subject to a daily limit per account, which exists to keep costs sane and is not a fault.</p>
+
+<h2>Availability</h2>
+<p>The app depends on services that may go down, and features may be added, changed or
+removed. Nothing here promises uninterrupted service.</p>
+
+<h2>Ending things</h2>
+<p>You can delete your account at any time from <strong>Profile → Delete Account</strong>.
+Doing so removes your account, your meals and your photos permanently. Deleting your account
+does not by itself cancel a subscription — cancel that in your Apple ID settings. Access may
+be suspended if these terms are broken.</p>
+
+<h2>Liability</h2>
+<p>The app is provided as it is. To the fullest extent the law allows, the developer is not
+liable for any loss arising from use of the app or from reliance on its estimates. Nothing
+here limits rights that cannot be limited under the law that applies to you.</p>
+
+<h2>Changes to these terms</h2>
+<p>These terms may change. The date at the top will change with them, and continuing to use
+the app after a change means you accept the new version.</p>
+
+<h2>Governing law</h2>
+<p>These terms are governed by the laws of the Republic of Uzbekistan, without affecting
+any consumer rights you hold where you live.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:adizovkamrom@gmail.com">adizovkamrom@gmail.com</a></p>
+
+<footer>
+  <a href="./">Privacy Policy</a>
+</footer>
+
+</main>
+</body>
+</html>
